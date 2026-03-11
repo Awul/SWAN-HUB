@@ -162,3 +162,11 @@
 1773245516: mosquitto version 2.0.22 running
 1773245518: New connection from 172.18.0.1:52318 on port 1883.
 1773245518: New client connected from 172.18.0.1:52318 as test_pc (p5, c1, k60, u'swan').
+1773245932: mosquitto version 2.0.22 terminating
+1773245933: mosquitto version 2.0.22 starting
+1773245933: Config loaded from /mosquitto/config/mosquitto.conf.
+1773245933: Opening ipv4 listen socket on port 1883.
+1773245933: Opening ipv6 listen socket on port 1883.
+1773245933: mosquitto version 2.0.22 running
+1773245936: New connection from 172.18.0.1:50062 on port 1883.
+1773245936: New client connected from 172.18.0.1:50062 as test_pc (p5, c1, k60, u'swan').
