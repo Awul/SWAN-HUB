@@ -44,13 +44,14 @@ echo
 # Create/overwrite .env
 cat <<EOF > "$ENV_FILE"
 # MQTT credentials
-MQTT_USER=swan
-MQTT_PASS=$MQTT_PASS
+export MQTT_USER=swan
+export MQTT_PASS=$MQTT_PASS
 
 # Broker host/port
-MQTT_BROKER=mqtt
-MQTT_PORT=1883
+export MQTT_BROKER=mqtt
+export MQTT_PORT=1883
 EOF
 
 echo -e "${CYAN}.env file created/updated at $ENV_FILE${RESET}"
+chmod +x $REPO_ROOT/.env
 printline 34

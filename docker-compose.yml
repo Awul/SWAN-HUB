@@ -18,3 +18,12 @@ services:
       - ./modules/mqtt/data:/mosquitto/data #currently no data persistance, so it is unused
       - ./modules/mqtt/log:/mosquitto/log
     restart: unless-stopped
+
+  node-manager:
+    build: ./modules/node-manager
+    container_name: swan-node-manager
+    env_file:
+      - ./.env
+    depends_on:
+      - mqtt
+    restart: unless-stopped
