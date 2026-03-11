@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+
+# Docker
+*.env
+mqtt/data/
+mqtt/log/
+node_container/__pycache__/
+
+# VSCode / IDE files
+.vscode/

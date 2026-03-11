@@ -1,0 +1,164 @@
+1773238263: mosquitto version 2.0.22 starting
+1773238263: Config loaded from /mosquitto/config/mosquitto.conf.
+1773238263: Opening ipv4 listen socket on port 1883.
+1773238263: Opening ipv6 listen socket on port 1883.
+1773238263: mosquitto version 2.0.22 running
+1773238880: mosquitto version 2.0.22 terminating
+1773238881: mosquitto version 2.0.22 starting
+1773238881: Config loaded from /mosquitto/config/mosquitto.conf.
+1773238881: Error: Unable to decode password salt for user swan, removing entry.
+1773238881: Opening ipv4 listen socket on port 1883.
+1773238881: Opening ipv6 listen socket on port 1883.
+1773238881: mosquitto version 2.0.22 running
+1773239436: mosquitto version 2.0.22 terminating
+1773239437: mosquitto version 2.0.22 starting
+1773239437: Config loaded from /mosquitto/config/mosquitto.conf.
+1773239437: Opening ipv4 listen socket on port 1883.
+1773239437: Opening ipv6 listen socket on port 1883.
+1773239437: mosquitto version 2.0.22 running
+1773239656: mosquitto version 2.0.22 terminating
+1773239658: mosquitto version 2.0.22 starting
+1773239658: Config loaded from /mosquitto/config/mosquitto.conf.
+1773239658: Opening ipv4 listen socket on port 1883.
+1773239658: Opening ipv6 listen socket on port 1883.
+1773239658: mosquitto version 2.0.22 running
+1773239658: New connection from 137.226.61.56:49730 on port 1883.
+1773239658: New client connected from 137.226.61.56:49730 as test_pc (p5, c1, k60, u'swan').
+1773239661: New connection from 172.18.0.1:53182 on port 1883.
+1773239661: Client test_pc already connected, closing old connection.
+1773239661: New client connected from 172.18.0.1:53182 as test_pc (p5, c1, k60, u'swan').
+1773239665: New connection from 172.18.0.1:54944 on port 1883.
+1773239665: Client test_pc already connected, closing old connection.
+1773239665: New client connected from 172.18.0.1:54944 as test_pc (p5, c1, k60, u'swan').
+1773239669: New connection from 172.18.0.1:54946 on port 1883.
+1773239669: Client test_pc already connected, closing old connection.
+1773239669: New client connected from 172.18.0.1:54946 as test_pc (p5, c1, k60, u'swan').
+1773239670: New connection from 172.18.0.1:54954 on port 1883.
+1773239670: Client test_pc already connected, closing old connection.
+1773239670: New client connected from 172.18.0.1:54954 as test_pc (p5, c1, k60, u'swan').
+1773239673: New connection from 172.18.0.1:54966 on port 1883.
+1773239673: Client test_pc already connected, closing old connection.
+1773239673: New client connected from 172.18.0.1:54966 as test_pc (p5, c1, k60, u'swan').
+1773239674: New connection from 172.18.0.1:60514 on port 1883.
+1773239674: Client test_pc already connected, closing old connection.
+1773239674: New client connected from 172.18.0.1:60514 as test_pc (p5, c1, k60, u'swan').
+1773239678: New connection from 172.18.0.1:60518 on port 1883.
+1773239678: Client test_pc already connected, closing old connection.
+1773239678: New client connected from 172.18.0.1:60518 as test_pc (p5, c1, k60, u'swan').
+1773239678: Client test_pc closed its connection.
+1773239678: New connection from 172.18.0.1:60532 on port 1883.
+1773239678: New client connected from 172.18.0.1:60532 as test_pc (p5, c1, k60, u'swan').
+1773239682: New connection from 172.18.0.1:60546 on port 1883.
+1773239682: Client test_pc already connected, closing old connection.
+1773239682: New client connected from 172.18.0.1:60546 as test_pc (p5, c1, k60, u'swan').
+1773239686: New connection from 172.18.0.1:40610 on port 1883.
+1773239686: Client test_pc already connected, closing old connection.
+1773239686: New client connected from 172.18.0.1:40610 as test_pc (p5, c1, k60, u'swan').
+1773239690: New connection from 172.18.0.1:40624 on port 1883.
+1773239690: Client test_pc already connected, closing old connection.
+1773239690: New client connected from 172.18.0.1:40624 as test_pc (p5, c1, k60, u'swan').
+1773239694: New connection from 172.18.0.1:40634 on port 1883.
+1773239694: Client test_pc already connected, closing old connection.
+1773239694: New client connected from 172.18.0.1:40634 as test_pc (p5, c1, k60, u'swan').
+1773239698: New connection from 172.18.0.1:55550 on port 1883.
+1773239698: Client test_pc already connected, closing old connection.
+1773239698: New client connected from 172.18.0.1:55550 as test_pc (p5, c1, k60, u'swan').
+1773239702: New connection from 172.18.0.1:55556 on port 1883.
+1773239702: Client test_pc already connected, closing old connection.
+1773239702: New client connected from 172.18.0.1:55556 as test_pc (p5, c1, k60, u'swan').
+1773239706: New connection from 172.18.0.1:43978 on port 1883.
+1773239706: Client test_pc already connected, closing old connection.
+1773239706: New client connected from 172.18.0.1:43978 as test_pc (p5, c1, k60, u'swan').
+1773239710: New connection from 172.18.0.1:43992 on port 1883.
+1773239710: Client test_pc already connected, closing old connection.
+1773239710: New client connected from 172.18.0.1:43992 as test_pc (p5, c1, k60, u'swan').
+1773239714: New connection from 172.18.0.1:43996 on port 1883.
+1773239714: Client test_pc already connected, closing old connection.
+1773239714: New client connected from 172.18.0.1:43996 as test_pc (p5, c1, k60, u'swan').
+1773239716: New connection from 172.18.0.1:44756 on port 1883.
+1773239716: Client test_pc already connected, closing old connection.
+1773239716: New client connected from 172.18.0.1:44756 as test_pc (p5, c1, k60, u'swan').
+1773239718: New connection from 172.18.0.1:44760 on port 1883.
+1773239718: Client test_pc already connected, closing old connection.
+1773239718: New client connected from 172.18.0.1:44760 as test_pc (p5, c1, k60, u'swan').
+1773239720: New connection from 172.18.0.1:44764 on port 1883.
+1773239720: Client test_pc already connected, closing old connection.
+1773239720: New client connected from 172.18.0.1:44764 as test_pc (p5, c1, k60, u'swan').
+1773239724: New connection from 172.18.0.1:58786 on port 1883.
+1773239724: Client test_pc already connected, closing old connection.
+1773239724: New client connected from 172.18.0.1:58786 as test_pc (p5, c1, k60, u'swan').
+1773239728: New connection from 172.18.0.1:58792 on port 1883.
+1773239728: Client test_pc already connected, closing old connection.
+1773239728: New client connected from 172.18.0.1:58792 as test_pc (p5, c1, k60, u'swan').
+1773239732: New connection from 172.18.0.1:58808 on port 1883.
+1773239732: Client test_pc already connected, closing old connection.
+1773239732: New client connected from 172.18.0.1:58808 as test_pc (p5, c1, k60, u'swan').
+1773239736: New connection from 172.18.0.1:42132 on port 1883.
+1773239736: Client test_pc already connected, closing old connection.
+1773239736: New client connected from 172.18.0.1:42132 as test_pc (p5, c1, k60, u'swan').
+1773239740: Client test_pc closed its connection.
+1773239796: New connection from 172.18.0.1:36210 on port 1883.
+1773239796: New client connected from 172.18.0.1:36210 as test_pc (p5, c1, k60, u'swan').
+1773240284: Client test_pc has exceeded timeout, disconnecting.
+1773240289: New connection from 172.18.0.1:38676 on port 1883.
+1773240289: New client connected from 172.18.0.1:38676 as test_pc (p5, c1, k60, u'swan').
+1773240806: Client test_pc has exceeded timeout, disconnecting.
+1773240811: New connection from 172.18.0.1:57170 on port 1883.
+1773240811: New client connected from 172.18.0.1:57170 as test_pc (p5, c1, k60, u'swan').
+1773241346: Client test_pc has exceeded timeout, disconnecting.
+1773241351: New connection from 172.18.0.1:46066 on port 1883.
+1773241351: New client connected from 172.18.0.1:46066 as test_pc (p5, c1, k60, u'swan').
+1773242126: Client test_pc has exceeded timeout, disconnecting.
+1773242131: New connection from 172.18.0.1:42522 on port 1883.
+1773242131: New client connected from 172.18.0.1:42522 as test_pc (p5, c1, k60, u'swan').
+1773242786: Client test_pc has exceeded timeout, disconnecting.
+1773242791: New connection from 172.18.0.1:44494 on port 1883.
+1773242791: New client connected from 172.18.0.1:44494 as test_pc (p5, c1, k60, u'swan').
+1773243386: Client test_pc has exceeded timeout, disconnecting.
+1773243391: New connection from 172.18.0.1:56128 on port 1883.
+1773243391: New client connected from 172.18.0.1:56128 as test_pc (p5, c1, k60, u'swan').
+1773243926: Client test_pc has exceeded timeout, disconnecting.
+1773243931: New connection from 172.18.0.1:44982 on port 1883.
+1773243931: New client connected from 172.18.0.1:44982 as test_pc (p5, c1, k60, u'swan').
+1773244299: mosquitto version 2.0.22 terminating
+1773244300: mosquitto version 2.0.22 starting
+1773244300: Config loaded from /mosquitto/config/mosquitto.conf.
+1773244300: Error: Unable to decode password salt for user swan, removing entry.
+1773244300: Opening ipv4 listen socket on port 1883.
+1773244300: Opening ipv6 listen socket on port 1883.
+1773244300: mosquitto version 2.0.22 running
+1773244303: New connection from 172.18.0.1:40830 on port 1883.
+1773244303: Client test_pc disconnected, not authorised.
+1773244453: New connection from 172.18.0.1:35298 on port 1883.
+1773244453: Client test_pc disconnected, not authorised.
+1773244462: New connection from 172.18.0.1:38586 on port 1883.
+1773244462: Client test_pc disconnected, not authorised.
+1773244485: New connection from 172.18.0.1:43626 on port 1883.
+1773244485: Client test_pc disconnected, not authorised.
+1773244723: mosquitto version 2.0.22 terminating
+1773244724: mosquitto version 2.0.22 starting
+1773244724: Config loaded from /mosquitto/config/mosquitto.conf.
+1773244724: Error: Unable to decode password salt for user swan, removing entry.
+1773244724: Opening ipv4 listen socket on port 1883.
+1773244724: Opening ipv6 listen socket on port 1883.
+1773244724: mosquitto version 2.0.22 running
+1773244758: New connection from 172.18.0.1:55234 on port 1883.
+1773244758: Client test_pc disconnected, not authorised.
+1773244838: New connection from 172.18.0.1:49764 on port 1883.
+1773244838: Client test_pc disconnected, not authorised.
+1773245322: mosquitto version 2.0.22 terminating
+1773245324: mosquitto version 2.0.22 starting
+1773245324: Config loaded from /mosquitto/config/mosquitto.conf.
+1773245324: Opening ipv4 listen socket on port 1883.
+1773245324: Opening ipv6 listen socket on port 1883.
+1773245324: mosquitto version 2.0.22 running
+1773245336: New connection from 172.18.0.1:45234 on port 1883.
+1773245336: New client connected from 172.18.0.1:45234 as test_pc (p5, c1, k60, u'swan').
+1773245514: mosquitto version 2.0.22 terminating
+1773245516: mosquitto version 2.0.22 starting
+1773245516: Config loaded from /mosquitto/config/mosquitto.conf.
+1773245516: Opening ipv4 listen socket on port 1883.
+1773245516: Opening ipv6 listen socket on port 1883.
+1773245516: mosquitto version 2.0.22 running
+1773245518: New connection from 172.18.0.1:52318 on port 1883.
+1773245518: New client connected from 172.18.0.1:52318 as test_pc (p5, c1, k60, u'swan').

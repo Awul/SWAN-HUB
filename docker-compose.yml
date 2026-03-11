@@ -3,6 +3,18 @@ services:
 
   web:
     build: ./modules/web
+    container_name: swan-test-web-server
     ports:
       - "80:80"
+    restart: unless-stopped
+
+  mqtt:
+    build: ./modules/mqtt
+    container_name: swan-mqtt-server
+    ports:
+      - "1883:1883" #MQTT
+    volumes:
+      - ./modules/mqtt/config:/mosquitto/config
+      - ./modules/mqtt/data:/mosquitto/data #currently no data persistance, so it is unused
+      - ./modules/mqtt/log:/mosquitto/log
     restart: unless-stopped
