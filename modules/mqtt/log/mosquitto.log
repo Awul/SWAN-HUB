@@ -415,3 +415,68 @@
 1773253185: Client node03 disconnected.
 1773253185: Client node04 disconnected.
 1773253185: Client node05 disconnected.
+1773253886: Client test_pc has exceeded timeout, disconnecting.
+1773253890: New connection from 172.18.0.1:41850 on port 1883.
+1773253890: New client connected from 172.18.0.1:41850 as test_pc (p5, c1, k60, u'swan').
+1773254486: Client test_pc has exceeded timeout, disconnecting.
+1773254490: New connection from 172.18.0.1:35936 on port 1883.
+1773254490: New client connected from 172.18.0.1:35936 as test_pc (p5, c1, k60, u'swan').
+1773255026: Client test_pc has exceeded timeout, disconnecting.
+1773255030: New connection from 172.18.0.1:35752 on port 1883.
+1773255030: New client connected from 172.18.0.1:35752 as test_pc (p5, c1, k60, u'swan').
+1773255243: Client test_pc has exceeded timeout, disconnecting.
+1773304638: New connection from 137.226.61.56:49738 on port 1883.
+1773304638: New client connected from 137.226.61.56:49738 as test_pc (p5, c1, k60, u'swan').
+1773304728: Client test_pc has exceeded timeout, disconnecting.
+1773305437: New connection from 172.18.0.1:55968 on port 1883.
+1773305437: New client connected from 172.18.0.1:55968 as test_pc (p5, c1, k60, u'swan').
+1773306326: Client test_pc has exceeded timeout, disconnecting.
+1773306331: New connection from 172.18.0.1:60022 on port 1883.
+1773306331: New client connected from 172.18.0.1:60022 as test_pc (p5, c1, k60, u'swan').
+1773306618: mosquitto version 2.0.22 terminating
+1773306630: mosquitto version 2.0.22 starting
+1773306630: Config loaded from /mosquitto/config/mosquitto.conf.
+1773306630: Opening ipv4 listen socket on port 1883.
+1773306630: Opening ipv6 listen socket on port 1883.
+1773306630: Opening websockets listen socket on port 9001.
+1773306630: mosquitto version 2.0.22 running
+1773306630: New connection from 137.226.61.56:52407 on port 1883.
+1773306630: New client connected from 137.226.61.56:52407 as test_pc (p5, c1, k60, u'swan').
+1773306631: New connection from 172.18.0.4:54791 on port 1883.
+1773306631: New client connected from 172.18.0.4:54791 as auto-7153E378-8519-703B-358A-DA3F01E929F1 (p2, c1, k60, u'swan').
+1773306884: New connection from 172.18.0.1:36096 on port 1883.
+1773306884: New client connected from 172.18.0.1:36096 as node01 (p2, c1, k60, u'swan').
+1773306884: New connection from 172.18.0.1:36110 on port 1883.
+1773306884: New client connected from 172.18.0.1:36110 as node02 (p2, c1, k60, u'swan').
+1773306884: New connection from 172.18.0.1:36124 on port 1883.
+1773306884: New client connected from 172.18.0.1:36124 as node03 (p2, c1, k60, u'swan').
+1773306884: New connection from 172.18.0.1:36140 on port 1883.
+1773306884: New client connected from 172.18.0.1:36140 as node04 (p2, c1, k60, u'swan').
+1773306884: New connection from 172.18.0.1:36146 on port 1883.
+1773306884: New client connected from 172.18.0.1:36146 as node05 (p2, c1, k60, u'swan').
+1773307342: mosquitto version 2.0.22 terminating
+1773307354: mosquitto version 2.0.22 starting
+1773307354: Config loaded from /mosquitto/config/mosquitto.conf.
+1773307354: Opening ipv4 listen socket on port 1883.
+1773307354: Opening ipv6 listen socket on port 1883.
+1773307354: Opening websockets listen socket on port 9001.
+1773307354: mosquitto version 2.0.22 running
+1773307354: New connection from 137.226.61.56:54266 on port 1883.
+1773307354: New client connected from 137.226.61.56:54266 as test_pc (p5, c1, k60, u'swan').
+1773307355: New connection from 172.18.0.4:51849 on port 1883.
+1773307355: New client connected from 172.18.0.4:51849 as auto-D3386420-8372-8DE2-D74F-E2BE7A428DC8 (p2, c1, k60, u'swan').
+1773307511: New connection from 172.18.0.1:43624 on port 1883.
+1773307511: New client connected from 172.18.0.1:43624 as node01 (p2, c1, k60, u'swan').
+1773307511: New connection from 172.18.0.1:43632 on port 1883.
+1773307511: New client connected from 172.18.0.1:43632 as node02 (p2, c1, k60, u'swan').
+1773307511: New connection from 172.18.0.1:43640 on port 1883.
+1773307511: New client connected from 172.18.0.1:43640 as node03 (p2, c1, k60, u'swan').
+1773307511: New connection from 172.18.0.1:43650 on port 1883.
+1773307511: New client connected from 172.18.0.1:43650 as node04 (p2, c1, k60, u'swan').
+1773307511: New connection from 172.18.0.1:43666 on port 1883.
+1773307511: New client connected from 172.18.0.1:43666 as node05 (p2, c1, k60, u'swan').
+1773307571: Client node01 disconnected.
+1773307571: Client node02 disconnected.
+1773307571: Client node03 disconnected.
+1773307571: Client node04 disconnected.
+1773307571: Client node05 disconnected.

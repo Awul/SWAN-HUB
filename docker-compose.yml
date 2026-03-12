@@ -13,6 +13,7 @@ services:
     container_name: swan-mqtt-server
     ports:
       - "1883:1883" #MQTT
+      - "9001:9001" #Websocket
     volumes:
       - ./modules/mqtt/config:/mosquitto/config
       - ./modules/mqtt/data:/mosquitto/data #currently no data persistance, so it is unused
@@ -22,8 +23,18 @@ services:
   node-manager:
     build: ./modules/node-manager
     container_name: swan-node-manager
+    ports:
+      - "8000:8000"
     env_file:
       - ./.env
     depends_on:
       - mqtt
     restart: unless-stopped
+
+  #node-gui:
+  #  build: ./modules/node-gui
+  #  container_name: swan-node-gui
+  #  ports:
+  #    - "3000:3000"
+  #  depends_on:
+  #    - mqtt
