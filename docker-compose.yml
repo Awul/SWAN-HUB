@@ -31,10 +31,10 @@ services:
       - mqtt
     restart: unless-stopped
 
-  #node-gui:
-  #  build: ./modules/node-gui
-  #  container_name: swan-node-gui
-  #  ports:
-  #    - "3000:3000"
-  #  depends_on:
-  #    - mqtt
+  node-gui:
+    build: ./modules/node-gui
+    container_name: swan-node-gui
+    ports:
+      - "5173:5173"
+    depends_on:
+      - node-manager

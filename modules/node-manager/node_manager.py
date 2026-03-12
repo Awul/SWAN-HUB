@@ -9,6 +9,7 @@ import asyncio
 
 import paho.mqtt.client as mqtt
 from fastapi import FastAPI, WebSocket
+from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 
 # =========================
@@ -41,7 +42,25 @@ STATUS_TOPIC = "swan-hub/nodes/status"
 # FastAPI
 # =========================
 app = FastAPI(title="SWAN Node Manager API")
-websockets = set()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],      # allow all origins for now; add front end url later!
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+connections = set()  # global
+
+async def broadcast_update(data):
+    # convert to JSON string once
+    message = json.dumps(data)
+    for ws in list(connections):
+        try:
+            await ws.send_text(message)
+        except Exception:
+            connections.remove(ws)
 
 def now():
     return int(time.time())
@@ -49,12 +68,7 @@ def now():
 # =========================
 # WebSocket broadcast
 # =========================
-async def broadcast_update(data):
-    for ws in list(websockets):
-        try:
-            await ws.send_json(data)
-        except:
-            websockets.remove(ws)
+
 
 # =========================
 # Publish node status
@@ -74,8 +88,10 @@ def publish_status(client):
 
     # push updates to websocket clients
     try:
-        asyncio.run(broadcast_update(payload))
+        loop = asyncio.get_running_loop()
+        loop.create_task(broadcast_update(payload))
     except RuntimeError:
+        # no loop running (MQTT thread), schedule later
         pass
 
 # =========================
@@ -279,17 +295,26 @@ def get_node(node_id: str):
         "sensors": node.get("sensors")
     }
 
+# =========================
+#async def broadcast_update(data):
+#    for ws in list(websockets):
+#        try:
+#            await ws.send_json(data)
+#        except:
+#            websockets.remove(ws)
+
 @app.websocket("/ws")
 async def websocket_endpoint(ws: WebSocket):
-
-    await ws.accept()
-    websockets.add(ws)
-
+    await ws.accept()          # Accept the WebSocket handshake
+    connections.add(ws)
     try:
         while True:
-            await asyncio.sleep(3600)
-    except:
-        websockets.remove(ws)
+            # keep connection alive
+            await asyncio.sleep(10)
+    except Exception as e:
+        print("WebSocket closed:", e)
+    finally:
+        connections.remove(ws)
 
 # =========================
 # Start API
@@ -300,7 +325,8 @@ def start_api():
         app,
         host="0.0.0.0",
         port=8000,
-        log_level="warning"
+        log_level="warning",
+        loop="asyncio"
     )
 
 # =========================
