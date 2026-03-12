@@ -914,3 +914,69 @@
 1773323538: New client connected from 137.226.61.56:63568 as test_pc (p5, c1, k60, u'swan').
 1773323540: New connection from 172.18.0.4:47341 on port 1883.
 1773323540: New client connected from 172.18.0.4:47341 as auto-0D516D87-7DCC-433A-2492-1CA557FEB74B (p2, c1, k60, u'swan').
+1773324330: Client test_pc has exceeded timeout, disconnecting.
+1773324335: New connection from 172.18.0.1:34180 on port 1883.
+1773324335: New client connected from 172.18.0.1:34180 as test_pc (p5, c1, k60, u'swan').
+1773324871: Client test_pc has exceeded timeout, disconnecting.
+1773324875: New connection from 172.18.0.1:34438 on port 1883.
+1773324875: New client connected from 172.18.0.1:34438 as test_pc (p5, c1, k60, u'swan').
+1773325470: Client test_pc has exceeded timeout, disconnecting.
+1773325475: New connection from 172.18.0.1:52352 on port 1883.
+1773325475: New client connected from 172.18.0.1:52352 as test_pc (p5, c1, k60, u'swan').
+1773326011: Client test_pc has exceeded timeout, disconnecting.
+1773326015: New connection from 172.18.0.1:58372 on port 1883.
+1773326015: New client connected from 172.18.0.1:58372 as test_pc (p5, c1, k60, u'swan').
+1773326550: Client test_pc has exceeded timeout, disconnecting.
+1773326555: New connection from 172.18.0.1:35808 on port 1883.
+1773326555: New client connected from 172.18.0.1:35808 as test_pc (p5, c1, k60, u'swan').
+1773327151: Client test_pc has exceeded timeout, disconnecting.
+1773327155: New connection from 172.18.0.1:41542 on port 1883.
+1773327155: New client connected from 172.18.0.1:41542 as test_pc (p5, c1, k60, u'swan').
+1773327246: Client test_pc has exceeded timeout, disconnecting.
+1773331497: New connection from 172.18.0.1:45238 on port 1883.
+1773331497: New client connected from 172.18.0.1:45238 as test_pc (p5, c1, k60, u'swan').
+1773332445: New connection from 192.168.122.142:65174 on port 1883.
+1773332445: New client connected from 192.168.122.142:65174 as ESP32_d87818 (p2, c1, k120, u'swan').
+1773332454: New connection from 192.168.122.142:55781 on port 1883.
+1773332454: Client ESP32_d87818 already connected, closing old connection.
+1773332454: New client connected from 192.168.122.142:55781 as ESP32_d87818 (p2, c1, k120, u'swan').
+1773332611: Client test_pc has exceeded timeout, disconnecting.
+1773332615: New connection from 172.18.0.1:40280 on port 1883.
+1773332615: New client connected from 172.18.0.1:40280 as test_pc (p5, c1, k60, u'swan').
+1773333151: Client test_pc has exceeded timeout, disconnecting.
+1773333155: New connection from 172.18.0.1:43882 on port 1883.
+1773333155: New client connected from 172.18.0.1:43882 as test_pc (p5, c1, k60, u'swan').
+1773333690: Client test_pc has exceeded timeout, disconnecting.
+1773333695: New connection from 172.18.0.1:39026 on port 1883.
+1773333695: New client connected from 172.18.0.1:39026 as test_pc (p5, c1, k60, u'swan').
+1773334231: Client test_pc has exceeded timeout, disconnecting.
+1773334235: New connection from 172.18.0.1:58188 on port 1883.
+1773334235: New client connected from 172.18.0.1:58188 as test_pc (p5, c1, k60, u'swan').
+1773334348: New connection from 192.168.122.142:55782 on port 1883.
+1773334348: Client ESP32_d87818 already connected, closing old connection.
+1773334348: New client connected from 192.168.122.142:55782 as ESP32_d87818 (p2, c1, k120, u'swan').
+1773334397: New connection from 192.168.122.142:61558 on port 1883.
+1773334397: Client ESP32_d87818 already connected, closing old connection.
+1773334397: New client connected from 192.168.122.142:61558 as ESP32_d87818 (p2, c1, k120, u'swan').
+1773334413: New connection from 192.168.122.142:54683 on port 1883.
+1773334413: Client ESP32_d87818 already connected, closing old connection.
+1773334413: New client connected from 192.168.122.142:54683 as ESP32_d87818 (p2, c1, k120, u'swan').
+1773334826: New connection from 192.168.122.142:59526 on port 1883.
+1773334826: Client ESP32_d87818 already connected, closing old connection.
+1773334826: New client connected from 192.168.122.142:59526 as ESP32_d87818 (p2, c1, k120, u'swan').
+1773335033: New connection from 192.168.122.142:64977 on port 1883.
+1773335033: Client ESP32_d87818 already connected, closing old connection.
+1773335033: New client connected from 192.168.122.142:64977 as ESP32_d87818 (p2, c1, k120, u'swan').
+1773335324: mosquitto version 2.0.22 terminating
+1773335337: mosquitto version 2.0.22 starting
+1773335337: Config loaded from /mosquitto/config/mosquitto.conf.
+1773335337: Opening ipv4 listen socket on port 1883.
+1773335337: Opening ipv6 listen socket on port 1883.
+1773335337: Opening websockets listen socket on port 9001.
+1773335337: mosquitto version 2.0.22 running
+1773335337: New connection from 137.226.61.56:61366 on port 1883.
+1773335337: New client connected from 137.226.61.56:61366 as test_pc (p5, c1, k60, u'swan').
+1773335338: New connection from 172.18.0.4:35091 on port 1883.
+1773335338: New client connected from 172.18.0.4:35091 as auto-12697220-13E7-1D07-F000-79E04F9CA482 (p2, c1, k60, u'swan').
+1773335344: New connection from 192.168.122.142:64979 on port 1883.
+1773335344: New client connected from 192.168.122.142:64979 as ESP32_d87818 (p2, c1, k120, u'swan').
