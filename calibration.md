@@ -45,7 +45,6 @@ matter, relative humidity, temperature, VOC, NOx and either CO2 or formaldehyde.
 • VOC Index 
 • NOx Index 
 • CO2 
-es wäre gut zu wissen, welche sensoren in unserem Sensor eingebaut sind siehe Poduct Overview Tabelle im Datasheet
 
 Digital output
 
