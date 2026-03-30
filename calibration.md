@@ -10,8 +10,7 @@ Then a loop is necessary to record different inputs at various times and tempera
 In the loop the sensor and reference measure the temperature in a short time interval. Then the differences in measured variables and the mean difference are calculated. 
 
 ![alt text](image-12.png)
-
-?Accuracy: +- 0.1°C?  
+ 
 Seen here is that the Accuracy of the Temperature Sensor is constant at +-0.2°C for room temperatures. For the measuring set-up the probable temperature will lie within reasonable range from room temperature at approx. 21°C.
 ![alt text](image-14.png)
 
@@ -21,12 +20,12 @@ Furthermore at Temperatures up to 70°C the uncertainty was not bigger than 0.2�
 ## Calibration of light sensor
 As with the thermal sensor the calibration of the light sensor works with different light modes of an extern light source. The workflow of calibration is the same as the calibration of the thermal sensor.
 
-![alt text](image-6.png)
+![alt text](image-18.png)
 
 ## Calibration of humidity sensor
  integrated into temperature sensor, can they be calibrated together?
 
- Accuracy: +- 1.0 %RH
+ Accuracy: +- 1.8 %RH
 
 ![alt text](image-10.png)
 
@@ -34,10 +33,8 @@ As with the thermal sensor the calibration of the light sensor works with differ
 
 ## Calibration of air quality sensor
 
-wie funktioniert die Berechnung der air Quality?
-
 The SEN6x sensor module family is an air quality platform that combines critical parameters such as particulate 
-matter, relative humidity, temperature, VOC, NOx and either CO2 or formaldehyde. The used sensor in the modul build up has most of the named parameters, only the formaldehyde sensor is not included. 
+matter, relative humidity, temperature, VOC, NOx and either CO2 or formaldehyde. The used sensor in the module build up SEN66 SIN-T has most of the named parameters, only the formaldehyde sensor is not included. 
 
 • Particulate Matter 
 • Relative Humidity 
@@ -45,6 +42,7 @@ matter, relative humidity, temperature, VOC, NOx and either CO2 or formaldehyde.
 • VOC Index 
 • NOx Index 
 • CO2 
+
 
 Digital output
 
@@ -58,14 +56,14 @@ This should be repeated for all n connected sensors, so there is a loop hat iter
 Calculate mean variable:
 $$ v_{mean}(n) = \frac{1}{3} \sum_{i=1}^{3}v_i(n)$$ 
 where n = 1,2,..., and $v_i(n)$ with i = 1,2,3 are the three measured variables in one iteration.
-
-![alt text](image-7.png)
+S
+![alt text](image-19.png)
 
 After the programm iterated through every sensor the mean of v(n) is calculated. This can now be used to determine the offset of the individual sensors and adjust them.
 
 Calculate mean of all stored variables:
-$$ mean_{all}(n) =  \frac{1} {N}\sum_{n=1}^{N} v_{mean}(n)$$
+$$ mean_{all} =  \frac{1} {N}\sum_{n=1}^{N} v_{mean}(n)$$
 
-$$ offset(n) = v_{mean}(n) - mean_{all}(N)$$
+$$ offset(n) = v_{mean}(n) - mean_{all}$$
 
 The process of quick calibration is valid for all different types of sensors. 
