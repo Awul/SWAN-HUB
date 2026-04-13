@@ -12,12 +12,8 @@ log = logging.getLogger(__name__)
 # Store ongoing calibrations per sensor
 ongoing_calibrations = {}
 
-@app.get("/calibration/start/{sensor_id}")
 def read_sensor(sensor_id):
    return random.randint(0,10)
-
-
-    
 
 # Start calibration
 # Hier sollte man den Sensor auslesen, nacher lesen wir die Werte über MQTT
@@ -46,24 +42,32 @@ def calibration_step(sensor_id: str, ref_value: float):
     # Hier lesen wir aus unserem ongoing_calibrations Dict die Anzahl der Messungen aus
     # (da sollen generell immer alle wichtigen infos drinstehen zum aktuellen kalibrier vorgang)
     averages = ongoing_calibrations[sensor_id]["averages"]
+    measure = np.array([])
+    offset = np.array([])
 
     # Collect n measurements here:
-    avg_value = np.random.normal(loc=ref_value, scale=0.5)  # Simulate measurement with some noise
-    #Schleifenfunktion zum einlesen von n messwerten
+    for n in range(averages):
+        value = read_sensor(sensor_id)
+        measure = np.append(measure,value)
+
+    avg_value = 1/averages * np.sum(measure)
+    for m in range(averages):
+        offset_temp = measure[m] - avg_value
+        offset = np.append(offset, offset_temp)
 
     # Hier wird das Werte-Paar aus Referenzwert und gemessenem Durchschnittswert in die ongoing_calibrations Struktur gespeichert
     # Am ende soll daraus dann eine n Punkt kalibrierung berechnet werden. Da am besten mal schauen ob wir das begrenzen sollten
     # oder dynamisch halten wollen.
-    ongoing_calibrations[sensor_id]["steps"].append((ref_value, avg_value))
-    log.info(f"Step recorded for '{sensor_id}': ref={ref_value}, avg_measured={avg_value}")
-    return {"message": "Step recorded", "average": avg_value}
+    ongoing_calibrations[sensor_id]["steps"].append((ref_value, avg_value, offset))
+    log.info(f"Step recorded for '{sensor_id}': ref={ref_value}, avg_measured={avg_value}, offset= {offset}")
+    return {"message": "Step recorded", "average": {avg_value}}
 
 # Finish calibration
 # Hier wird dann aus den gesammelten Werte-Paaren die Kalibrierung berechnet. Da kommt es jetzt auf das genaue kalibrierungsmodell an.
 @app.get("/calibration/finish/{sensor_id}")
 def finish_calibration(sensor_id: str):
     steps = ongoing_calibrations[sensor_id]["steps"]
-    refs, raws = zip(*steps)
+    refs, raws, off = zip(*steps)
     # Hier als beispiel nen linearer Fit.
     scalar, offset = np.polyfit(raws, refs, 1)
     del ongoing_calibrations[sensor_id]
@@ -72,12 +76,12 @@ def finish_calibration(sensor_id: str):
     log.info(f"Calibration finished for '{sensor_id}'. Scalar={scalar}, Offset={offset}")
     # Als Rückgabe an die API dann die Koeffizienten, am besten aber auch
     # an den Sensor mit ner Platzhalterfunktion send_calibration(sensor_id, coefficients)
-    send_calibration(sensor_id, coefficients)
+    send_calibration(sensor_id, offset)
     
     return {
         "message": "Calibration finished",
         "coefficients": {"scalar": scalar, "offset": offset},
-        "steps": [{"ref": r, "measured_avg": m} for r, m in steps]
+        "steps": [{"ref": r, "measured_avg": m, "offset": o} for r, m, o in steps]
     }
 
 def send_calibration(sensor_id, coefficients):
@@ -85,6 +89,7 @@ def send_calibration(sensor_id, coefficients):
 
 
 #Quickcalibration
+#Beschreibung Quickcalibration einfügen zur besseren Lesbarkeit
 @app.get("/calibration/quickcalibration/{averages}/{number_of_sensors}")
 def quick_calibration(averages:int, number_of_sensors:int):
     # Anzahl der Averages wird aus allen Sensoren ausgemessen und der allgemeine Mittelwert bestimmt. Dann wird für jeden Sensor der Offset ermittelt und zurückgegeben
