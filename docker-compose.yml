@@ -23,12 +23,55 @@ services:
   node-manager:
     build: ./modules/node-manager
     container_name: swan-node-manager
-    ports:
-      - "8000:8000"
+    network_mode: host
     env_file:
       - ./.env
+    environment:
+      - MQTT_BROKER=127.0.0.1
+      - MQTT_PORT=1883
     depends_on:
       - mqtt
+    restart: unless-stopped
+
+  data-db:
+    image: postgres:16
+    container_name: swan-data-db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=swan_data
+      - POSTGRES_USER=swan
+      - POSTGRES_PASSWORD=swanpass
+    volumes:
+      - ./modules/data-logger/db-data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  data-logger:
+    build: ./modules/data-logger
+    container_name: swan-data-logger
+    ports:
+      - "8001:8001"
+    environment:
+      - NODE_MANAGER_URL=http://host.docker.internal:8000
+      - DB_HOST=data-db
+      - DB_PORT=5432
+      - DB_NAME=swan_data
+      - DB_USER=swan
+      - DB_PASS=swanpass
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      - data-db
+      - node-manager
+    restart: unless-stopped
+
+  data-logger-ui:
+    build: ./modules/data-logger-ui
+    container_name: swan-data-logger-ui
+    ports:
+      - "5174:5174"
+    depends_on:
+      - data-logger
     restart: unless-stopped
 
   node-gui:
