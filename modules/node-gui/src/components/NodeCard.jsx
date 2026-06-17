@@ -2,7 +2,7 @@ import SensorItem from "./SensorItem";
 import toast from "react-hot-toast";
 import { useEffect, useRef } from "react";
 
-export default function NodeCard({ nodeId, node }) {
+export default function NodeCard({ nodeId, node, onSyncRead, isSyncing }) {
   const lastSeen = node.last_seen ?? 0;
 
   // lighter background colors
@@ -32,6 +32,18 @@ export default function NodeCard({ nodeId, node }) {
         <span className="mr-4">FW: v{node.firmware ?? "?"}</span>
         <span className="mr-4">Uptime: {node.uptime ?? "?"}s</span>
         <span>Last seen: {lastSeen}s</span>
+      </div>
+      <div className="mb-4">
+        {onSyncRead && (
+          <button
+            type="button"
+            className="rounded bg-sky-600 px-3 py-1 text-sm font-semibold text-white hover:bg-sky-500 disabled:opacity-50"
+            onClick={() => onSyncRead(nodeId)}
+            disabled={isSyncing}
+          >
+            {isSyncing ? "Reading..." : "Read Now"}
+          </button>
+        )}
       </div>
       <div>
         {Object.entries(node.sensors).map(([name, value]) => (

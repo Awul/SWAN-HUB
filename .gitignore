@@ -16,5 +16,5 @@ node_container/__pycache__/
 /modules/data-logger/db-data/
 # logs
 *.log
-
+modules/mqtt/log
 .*

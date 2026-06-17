@@ -6,6 +6,6 @@ export default defineConfig({
   server: {
     host: true, // allows access from any IP
     port: 5173,
-    allowedHosts: ["swan-hub", "localhost", "host.docker.internal"] // add your hostnames
+    allowedHosts: ["swan-hub", "localhost", "host.docker.internal", "swan-hub.local"]
   }
 });
